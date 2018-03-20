@@ -2,45 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sebastian Guy</title>
 
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/css/stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="site-wrapper">
         <div class="overlay"></div>
         <div class="site-wrapper-inner">
             <div class="cover-container">
-                <div class="content-wrapper">
-                    <div class="col-md-3" id="sidebar">
-                        <button type="button" id="dismiss" class="btn btn-info navbar-btn">
-                            <i class="glyphicon glyphicon-arrow-left"></i>
+                <div class="masthead-nav">
+                    <span>Sebastian <span style="font-weight: bold">GUY</span></span>
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                            <i class="glyphicon glyphicon-menu-hamburger"></i>
                         </button>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="col-md-3 col-lg-4" id="sidebar">
                         <img class="rounded-circle" src="lib/images/profile.jpg" alt="Profile Picture">
                         <div>
                             <table>
                                 <tr>
-                                    <td><h3>Contact</h3></td>
+                                    <td><h2>About Me</h2></td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus ultricies arcu at semper. Integer quis nunc pellentesque, imperdiet nisl id, efficitur sem. Sed euismod dapibus velit, vitae scelerisque nisl vehicula in. Aenean facilisis iaculis metus, viverra sodales mi viverra et. </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><h2>Contact</h2></td>
                                 </tr>
                                 <tr id="icon-body">
                                     <td id="icon">
-                                        <i class="glyphicon glyphicon-earphone"></i><br>
+                                        <!-- <i class="glyphicon glyphicon-earphone"></i><br> -->
                                         <i class="glyphicon glyphicon-envelope"></i><br>
                                         <i class="fab fa-github"></i><br>
                                     </td>
                                     <td>
-                                        <a href="tel:555-555-5555">asd</a><br>
+                                        <!-- <a href="tel:555-555-5555"></a><br> -->
                                         <a href="mailto:generalguy_41@outlook.com">generalguy_41@outlook.com</a><br>
                                         <a href="http://www.github.com/generalguy41">github.com/generalguy41</a>
                                     </td>
                                 </tr>
-                                <tr><td><br><br></td></tr>
                                 <tr>
-                                    <td><h3>Interests</h3></td>
+                                    <td><h2>Interests</h2></td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -52,9 +67,8 @@
                                         </ul>
                                     </td>
                                 </tr>
-                                <tr><td><br><br></td></tr>
                                 <tr>
-                                    <td><h3>Connect</h3></td>
+                                    <td><h2>Connect</h2></td>
                                 </tr>
                                 <tr id="icon-body">
                                     <td id="icon">
@@ -63,36 +77,29 @@
                                         <i class="fab fa-linkedin-in"></i><br>
                                     </td>
                                     <td>
-                                        <a href="http://www.facebook.com/">Sebastian Guy</a><br>
-                                        <a href="http://www.twitter.com/">@generalguy41</a><br>
-                                        <a href="http://www.linkedin.com/">Sebastian Guy</a>
+                                        <a href="http://www.facebook.com/sebastian.guy">Sebastian Guy</a><br>
+                                        <a href="http://www.twitter.com/generalguy41">@generalguy41</a><br>
+                                        <a href="https://www.linkedin.com/in/sebastian-guy-b89773127">Sebastian Guy</a>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                     </div>
-                    <div class="col-md-9" id="content">
-                            <div class="navbar-header">
-                                    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-                                        <i class="glyphicon glyphicon-menu-hamburger"></i>
-                                        <span>Toggle Sidebar</span>
-                                    </button>
-                                </div>
+                    <div class="col-md-9 col-lg-8" id="content">
                         <div id="links">
                             <ul class="nav nav-tabs nav-justified">
                                 <li class="active"><a href="#resume" data-toggle="tab">Resume</a></li>
-                                <li><a href="#portfolio" data-toggle="tab">Portfolio</a></li>
-                                <li><a href="#about" data-toggle="tab">About Me</a></li>
+                                <li><a href="#projects" data-toggle="tab">Projects</a></li>
                             </ul>
                             <div class="tab-content">
-                                <div class="tab-pane active" id="resume">
-                                    <div id="section">
+                                <div class="tab-pane active row-no-gutter" id="resume">
+                                    <div id="section" class="col-md-6-no-gutter">
                                         <table>
-                                            <tr>
-                                                <td><h3>Education</h3></td>
+                                            <tr id="header">
+                                                <td colspan="2"><h2>Education</h2></td>
                                             </tr>
-                                            <tr>
-                                                <td>2015 - Present</td>
+                                            <tr id="body">
+                                                <td id="right">2015 - Present</td>
                                                 <td>Computer Engineering Technology – Computing Science<br>
                                                     Algonquin College of Applied Arts and Technology<br>
                                                     GPA 3.74 / 4.0 
@@ -100,31 +107,14 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <!-- <div id="section">
+                                    <div id="section" class="col-md-6-no-gutter">
                                         <table>
-                                            <tr>
-                                                <td><h3>Personal Attributes</h3></td>
+                                            <tr id="header">
+                                                <td><h2>Skills</h2></td>
                                             </tr>
-                                            <tr>
-                                                <td>Solid Team Player<br>
-                                                    Strong Organization<br>
-                                                    Hard Working
-                                                </td>
-                                                <td>Focused<br>
-                                                    Excellent People Skills<br>
-                                                    Punctual
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div> -->
-                                    <div id="section">
-                                        <table>
-                                            <tr>
-                                                <td><h3>Skills</h3></td>
-                                            </tr>
-                                            <tr>
+                                            <tr id="body">
                                                 <td>
-                                                    <h4>Software</h4>
+                                                    <h3 style="margin-top: 0;">Software</h3>
                                                     <ul>
                                                         <li>Windows, Linux, MacOS</li>
                                                         <li>NodeJS, C, C#, Java, JSON, HTML/CSS, JavaScript, PostgreSQL</li>
@@ -138,33 +128,109 @@
                                                         <li>Debugging and testing</li>
                                                         <li>Technical writing, documentation, and communication</li>
                                                     </ul>
+                                                    
+                                                    <h3>Hardware</h3>
+                                                    <ul>
+                                                        <li>Understanding of core computer components (RAM, HDD/SSD, CPU, GPU, etc)</li>
+                                                        <li>Simple Arduino (Teensy) programming</li>
+                                                        <li>Basic Raspberry Pi (Zero W, 3) projects</li>
+                                                    </ul>
+                                                    <h3>Other</h3>
+                                                    <ul>
+                                                        <li>Agile environment experience (Jira, Rally)</li>
+                                                    </ul>
                                                 </td>
                                             </tr>
                                         </table>
                                     </div>
-                                    <div id="section">
+                                    <div id="section" class="col-md-6-no-gutter">
                                         <table>
-                                            <tr>
-                                                <td><h3>Work Experience</h3></td>
+                                            <tr id="header">
+                                                <td><h2>Work Experience</h2></td>
                                             </tr>
-                                            <tr>
-                                                <td></td>
+                                            <tr id="body">
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <h5>Wind River Systems</h5>
+                                                                Co-op
+                                                            </td>
+                                                            <td id="right">
+                                                                Co-op Placement/Part-Time Work<br>
+                                                                February 2017 – April 2018                                                                
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <ul>
+                                                                    <li>Created Docker/Bash scripts to set up environments for new users</li>
+                                                                    <li>Created scripts to build and configure Docker Swarm clusters of Amazon Virtual Machines</li>
+                                                                    <li>Worked to create, maintain, and grow a variety of Docker Microservices</li>
+                                                                    <li>Worked with JSON REST API calls</li>
+                                                                    <li>Worked to help develop the Wind River Secure Device Onboarding (SDO) Tech Preview</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr><td><br></td></tr>
+                                                    </table>
+                                                    
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <h5>33 Combat Engineer Regiment, Canadian Armed Forces</h5>
+                                                                Private Reservist
+                                                            </td>
+                                                            <td id="right">
+                                                                Part-Time Member<br>
+                                                                May 2013 – Present                                                                    
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <ul>
+                                                                    <li>Active in weekly meetings during the training year (September – May)</li>
+                                                                    <li>Combat Engineer duties include:</li>
+                                                                    <ul>
+                                                                        <li>Handling explosives</li>
+                                                                        <li>Building bridges</li>
+                                                                        <li>Mine warfare</li>
+                                                                    </ul>
+                                                                    <li>Trained 5 Months as Quartermaster managing and tracking of inventory</li>
+                                                                    <li>Instructed in leadership duties that allowed me to:</li>
+                                                                    <ul>
+                                                                        <li>Lead sections through various drills and tasks</li>
+                                                                        <li>Work with members to keep them updated on information given by senior staff</li>
+                                                                        <li>Ensure that members use what they’ve learned and make corrections when necessary</li>
+                                                                    </ul>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
                                             </tr>
                                         </table>
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="portfolio">
-                                    <h3>Excepteur sint occaecat</h3>
-                                    <p>Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                                <div class="tab-pane" id="about">
-                                    <h3>Ut enim ad minim veniam</h3>
-                                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <div class="tab-pane row-no-gutter" id="projects">
+                                    <div id="section" class="col-md-6-no-gutter">
+                                        <table>
+                                            <tr id="header">
+                                                <td colspan="2"><br><br><br><br></td>
+                                            </tr>
+                                            <tr id="body">
+                                                <td>
+                                                    <h1>Coming Soon!</h1><br><br>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -177,8 +243,7 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            
-            $('#dismiss, .overlay').on('click', function () {
+            $('.overlay').on('click', function () {
                 $('#sidebar').removeClass('active');
                 $('.overlay').fadeOut();
             });
