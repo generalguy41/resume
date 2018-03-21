@@ -107,8 +107,8 @@ body {
 }
 
 #resume {
-    -moz-column-width: 49em;
-    -webkit-column-width: 49em;
+    -moz-column-width: 33em;
+    -webkit-column-width: 33em;
     -moz-column-gap: 2em;
     -webkit-column-gap:2em; 
 }
@@ -232,6 +232,15 @@ body {
     }
     .overlay {
         display: none;
+    }
+}
+
+@media (min-width: 1920px) {
+    #resume {
+        -moz-column-width: 49em;
+        -webkit-column-width: 49em;
+        -moz-column-gap: 2em;
+        -webkit-column-gap:2em; 
     }
 }
 
